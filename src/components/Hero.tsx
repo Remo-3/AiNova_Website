@@ -35,21 +35,23 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg px-8 py-6 glow-primary"
+              onClick={() => window.open('https://wa.me/918655351445', '_blank')}
             >
-              Get Free Audit
+              WhatsApp Us
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="glass border-2 border-primary/50 hover:bg-primary/10 text-lg px-8 py-6"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Book Strategy Call
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-20 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             <div className="glass p-6 rounded-xl">
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">500+</div>
               <div className="text-sm text-muted-foreground">Campaigns Launched</div>
