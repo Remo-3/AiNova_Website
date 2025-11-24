@@ -48,7 +48,7 @@ const Contact = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hi, I'm interested in your marketing services!");
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    window.open(`https://wa.me/918655351445?text=${message}`, "_blank");
   };
 
   return (
@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                  <p className="text-muted-foreground">hello@ainovamarketinglab.com</p>
+                  <p className="text-muted-foreground">ajitremje3@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                  <p className="text-muted-foreground">+91 98765 43210</p>
+                  <p className="text-muted-foreground">+91 86553 51445</p>
                 </div>
               </div>
             </div>

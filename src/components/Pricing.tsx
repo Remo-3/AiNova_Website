@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import Floating3DPrism from "./Floating3DPrism";
 
 const pricingPlans = [
   {
@@ -72,15 +73,20 @@ const Pricing = () => {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`glass p-8 rounded-3xl transition-all duration-300 hover:scale-105 ${
+              className={`glass p-8 rounded-3xl transition-all duration-300 hover:scale-105 relative overflow-hidden ${
                 plan.highlighted
                   ? "border-2 border-primary glow-primary relative"
                   : "border border-border/50"
               }`}
             >
+              {/* 3D Background Element */}
+              <div className="absolute inset-0 w-full h-full">
+                <Floating3DPrism />
+              </div>
+
               {/* Popular Badge */}
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                   <span className="bg-gradient-to-r from-primary to-secondary px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
@@ -88,7 +94,7 @@ const Pricing = () => {
               )}
 
               {/* Plan Header */}
-              <div className="mb-8">
+              <div className="mb-8 relative z-10">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
                 <div className="flex items-baseline">
@@ -98,7 +104,7 @@ const Pricing = () => {
               </div>
 
               {/* Features List */}
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 relative z-10">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -111,7 +117,7 @@ const Pricing = () => {
 
               {/* CTA Button */}
               <Button
-                className={`w-full ${
+                className={`w-full relative z-10 ${
                   plan.highlighted
                     ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
                     : "glass border-2 border-primary/50 hover:bg-primary/10"

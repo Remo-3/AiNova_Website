@@ -1,4 +1,5 @@
 import { Video, Target, Globe, Share2, Palette, Zap } from "lucide-react";
+import Floating3DCard from "./Floating3DCard";
 
 const services = [
   {
@@ -52,19 +53,24 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 group hover:glow-primary cursor-pointer"
+              className="glass p-8 rounded-2xl hover:scale-105 transition-all duration-300 group hover:glow-primary cursor-pointer relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              {/* 3D Background Element */}
+              <div className="absolute inset-0 w-full h-full">
+                <Floating3DCard />
+              </div>
+
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 group-hover:animate-pulse-glow">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-6 group-hover:animate-pulse-glow relative z-10">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold mb-4 group-hover:gradient-text transition-all">
+              <h3 className="text-2xl font-bold mb-4 group-hover:gradient-text transition-all relative z-10">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed relative z-10">
                 {service.description}
               </p>
             </div>
