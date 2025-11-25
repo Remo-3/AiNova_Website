@@ -8,52 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* AINova Marketing Lab - Futuristic AI Theme */
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    /* AINova Marketing Lab - Brand Colors */
+    --background: 226 51% 8%;
+    --foreground: 0 0% 100%;
 
-    --card: 222 47% 15%;
-    --card-foreground: 210 40% 98%;
+    --card: 225 28% 14%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222 47% 15%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 225 28% 14%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Neon Blue Primary */
-    --primary: 199 89% 48%;
-    --primary-foreground: 210 40% 98%;
+    /* Main Neon Blue Primary */
+    --primary: 231 99% 62%;
+    --primary-foreground: 0 0% 100%;
     
-    /* Deep Purple Secondary */
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 210 40% 98%;
+    /* Neon Purple Secondary */
+    --secondary: 271 70% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 225 28% 20%;
+    --muted-foreground: 200 15% 73%;
 
-    /* Neon Accent */
-    --accent: 280 100% 70%;
-    --accent-foreground: 210 40% 98%;
+    /* Electric Cyan Accent */
+    --accent: 186 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 25%;
-    --input: 217 33% 20%;
-    --ring: 199 89% 48%;
+    --border: 225 28% 25%;
+    --input: 225 28% 18%;
+    --ring: 231 99% 62%;
 
     --radius: 0.75rem;
 
-    /* Gradient Colors */
-    --gradient-start: 199 89% 48%;
-    --gradient-mid: 262 83% 58%;
-    --gradient-end: 280 100% 70%;
+    /* Brand Gradient Colors */
+    --gradient-start: 231 99% 62%;
+    --gradient-mid: 271 70% 60%;
+    --gradient-end: 186 100% 50%;
     
     /* Glow Effects */
-    --glow-primary: 199 89% 48%;
-    --glow-secondary: 262 83% 58%;
+    --glow-primary: 231 99% 62%;
+    --glow-secondary: 271 70% 60%;
+    
+    /* Tech Aqua */
+    --tech-aqua: 187 70% 50%;
     
     /* Glass Effect */
-    --glass-bg: 222 47% 15%;
-    --glass-border: 210 40% 80%;
+    --glass-bg: 225 28% 14%;
+    --glass-border: 0 0% 100%;
   }
 }
 
@@ -64,7 +67,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(222 47% 8%) 100%);
+    background: linear-gradient(135deg, hsl(226 51% 8%) 0%, hsl(226 51% 5%) 100%);
   }
   
   /* Glassmorphism utility */

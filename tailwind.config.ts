@@ -54,6 +54,7 @@ export default {
           primary: "hsl(var(--glow-primary))",
           secondary: "hsl(var(--glow-secondary))",
         },
+        "tech-aqua": "hsl(var(--tech-aqua))",
       },
       borderRadius: {
         lg: "var(--radius)",
